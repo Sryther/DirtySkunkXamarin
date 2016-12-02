@@ -1,3 +1,4 @@
+using DirtySkunk.Core.Utils;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.IoC;
 
@@ -12,7 +13,7 @@ namespace DirtySkunk.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<ViewModels.BooksViewModel>();
+            RegisterAppStart<ViewModels.SignInViewModel>();
         }
     }
 }

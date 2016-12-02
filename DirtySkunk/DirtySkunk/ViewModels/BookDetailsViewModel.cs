@@ -17,14 +17,14 @@ namespace DirtySkunk.Core.ViewModels
         private string _action;
         private string _removeVisibility;
         private string _confirmVisibility;
-        public MvxCommand<Book> ConfirmButtonCommand
+        public MvxCommand ConfirmButtonCommand
         {
-            get { return new MvxCommand<Book>(ConfirmBook);  }
+            get { return new MvxCommand(ConfirmBook);  }
         }
 
-        public  MvxCommand<Book> RemoveButtonCommand
+        public  MvxCommand RemoveButtonCommand
         {
-            get { return new MvxCommand<Book>(RemoveBook);  }
+            get { return new MvxCommand(RemoveBook);  }
         }
 
         protected override void InitFromBundle(IMvxBundle parameters)
@@ -67,15 +67,15 @@ namespace DirtySkunk.Core.ViewModels
 
         }
 
-        public void RemoveBook(Book book)
+        public void RemoveBook()
         {
-            BookService.GetInstance().Remove(book.Id);
+            BookService.GetInstance().Remove(_book.Id);
             ShowViewModel<BooksViewModel>();
         }
 
-        public void ConfirmBook(Book book)
+        public void ConfirmBook()
         {
-            BookService.GetInstance().Add(book);
+            BookService.GetInstance().Add(_book);
             ShowViewModel<BooksViewModel>();
         }
 
