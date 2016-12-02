@@ -12,7 +12,7 @@ namespace DirtySkunk.Droid.Views
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.LoginView);
+            SetContentView(Resource.Layout.SignInView);
         }
     }
 }
