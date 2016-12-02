@@ -1,0 +1,11 @@
+c:\users\thomas\documents\visual studio 2015\Projects\DirtySkunk\DirtySkunk\DirtySkunk\bin\Debug\DirtySkunk.dll
+c:\users\thomas\documents\visual studio 2015\Projects\DirtySkunk\DirtySkunk\DirtySkunk\bin\Debug\DirtySkunk.pdb
+c:\users\thomas\documents\visual studio 2015\Projects\DirtySkunk\DirtySkunk\DirtySkunk\obj\Debug\DirtySkunk.csprojResolveAssemblyReference.cache
+c:\users\thomas\documents\visual studio 2015\Projects\DirtySkunk\DirtySkunk\DirtySkunk\obj\Debug\DirtySkunk.dll
+c:\users\thomas\documents\visual studio 2015\Projects\DirtySkunk\DirtySkunk\DirtySkunk\obj\Debug\DirtySkunk.pdb
+c:\users\thomas\documents\visual studio 2015\Projects\DirtySkunk\DirtySkunk\DirtySkunk\obj\Debug\DirtySkunk.dll.mdb
+c:\users\thomas\documents\visual studio 2015\Projects\DirtySkunk\DirtySkunk\DirtySkunk\bin\Debug\DirtySkunk.dll.mdb
+c:\users\thomas\documents\visual studio 2015\Projects\DirtySkunk\DirtySkunk\DirtySkunk\obj\Debug\DirtySkunk.dll.mdb
+c:\users\thomas\documents\visual studio 2015\Projects\DirtySkunk\DirtySkunk\DirtySkunk\bin\Debug\DirtySkunk.dll.mdb
+c:\users\thomas\documents\visual studio 2015\Projects\DirtySkunk\DirtySkunk\DirtySkunk\obj\Debug\DirtySkunk.dll.mdb
+c:\users\thomas\documents\visual studio 2015\Projects\DirtySkunk\DirtySkunk\DirtySkunk\bin\Debug\DirtySkunk.dll.mdb
