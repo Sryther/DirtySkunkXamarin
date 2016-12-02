@@ -8,19 +8,23 @@ using DirtySkunk.Core.Exceptions;
 
 namespace DirtySkunk.Core.Services
 {
-    class BookService : IBookService
+    public class BookService : IBookService
     {
         private static BookService _instance = null;
         private List<Book> _books;
 
         private BookService()
         {
-            _books = new List<Book>();
+            _books = new List<Book>()
+            {
+                new Book("Toto", "Tata", "Synopsis", DateTime.Now, 2),
+                new Book("Toto", "Tata", "Synopsis", DateTime.Now, 2)
+            };
         }
 
         public static BookService GetInstance()
         {
-            if (_instance != null)
+            if (_instance == null)
             {
                 _instance = new BookService();
             }
@@ -34,12 +38,12 @@ namespace DirtySkunk.Core.Services
 
         public List<Book> Books()
         {
-            return new List<Book>(_books);
+            return _books;
         }
 
         public List<Book> BooksSortedByParutionDate()
         {
-            return _books.OrderBy(book => book.ParutionDate).ToList(); ;
+            return _books.OrderBy(book => book.ParutionDate).ToList();
         }
 
         public Book GetBookByGuid(string id)

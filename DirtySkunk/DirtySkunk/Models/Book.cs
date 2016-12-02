@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace DirtySkunk.Core.Models
 {
-    class Book
+    public class Book
     {
-        public string Id;
-        public string Title;
-        public string Author;
-        public string Synopsis;
-        public DateTime ParutionDate;
-        public int Rating;
+        public string Id { get; set; }
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public string Synopsis { get; set; }
+        public DateTime ParutionDate { get; set; }
+        public int Rating { get; set; }
 
         public Book(string title, string author, string synopsis, DateTime parutionDate, int rating)
         {

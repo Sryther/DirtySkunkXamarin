@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DirtySkunk.Core.Exceptions
 {
-    public class WrongRatingException : Exception
+    public class BookNotFoundException : Exception
     {
-        public WrongRatingException(int rating) : base("The rating must be between 1 and 5. The rating provided is" + rating + ".")
+        public BookNotFoundException(string id) : base("The book wasn't found using the following id: " + id +".")
         {
 
         }
