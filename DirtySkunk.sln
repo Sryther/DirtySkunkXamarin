@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirtySkunk.Droid", "DirtySkunk\DirtySkunk.Droid\DirtySkunk.Droid.csproj", "{758A87E3-5FA0-4673-9277-C0EFE8670F65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirtySkunk", "DirtySkunk\DirtySkunk\DirtySkunk.Core.csproj", "{FD682203-E05A-491B-B94F-DB53F304ABD6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirtySkunk.Core", "DirtySkunk\DirtySkunk\DirtySkunk.Core.csproj", "{FD682203-E05A-491B-B94F-DB53F304ABD6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
