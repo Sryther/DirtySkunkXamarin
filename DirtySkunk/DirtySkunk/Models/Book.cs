@@ -9,6 +9,7 @@ namespace DirtySkunk.Core.Models
 {
     class Book
     {
+        public string Id;
         public string Title;
         public string Author;
         public string Synopsis;
@@ -21,6 +22,8 @@ namespace DirtySkunk.Core.Models
             {
                 throw new WrongRatingException(rating);
             }
+
+            Id = Guid.NewGuid().ToString();
 
             Title = title;
             Author = author;

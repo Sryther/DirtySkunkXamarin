@@ -12,5 +12,7 @@ namespace DirtySkunk.Core.Services
         List<Book> Books();
         List<Book> BooksSortedByParutionDate();
         void Add(Book book);
+
+        Book GetBookByGuid(string id);
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DirtySkunk.Core.Models;
+using DirtySkunk.Core.Exceptions;
 
 namespace DirtySkunk.Core.Services
 {
@@ -39,6 +40,19 @@ namespace DirtySkunk.Core.Services
         public List<Book> BooksSortedByParutionDate()
         {
             return _books.OrderBy(book => book.ParutionDate).ToList(); ;
+        }
+
+        public Book GetBookByGuid(string id)
+        {
+            foreach (Book book in _books)
+            {
+                if (book.Id == id)
+                {
+                    return book;
+                }
+            }
+
+            throw new BookNotFoundException(id);
         }
     }
 }
