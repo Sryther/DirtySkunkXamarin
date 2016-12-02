@@ -87,10 +87,13 @@ namespace DirtySkunk.Droid
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int book = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int splash = 2130837505;
+			public const int Icon = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int splash = 2130837506;
 			
 			static Drawable()
 			{
@@ -125,10 +128,19 @@ namespace DirtySkunk.Droid
 		{
 			
 			// aapt resource value: 0x7f040000
-			public const int SignInView = 2130968576;
+			public const int BookDetailsView = 2130968576;
 			
 			// aapt resource value: 0x7f040001
-			public const int SplashScreen = 2130968577;
+			public const int books_template_list = 2130968577;
+			
+			// aapt resource value: 0x7f040002
+			public const int BooksView = 2130968578;
+			
+			// aapt resource value: 0x7f040003
+			public const int SignInView = 2130968579;
+			
+			// aapt resource value: 0x7f040004
+			public const int SplashScreen = 2130968580;
 			
 			static Layout()
 			{

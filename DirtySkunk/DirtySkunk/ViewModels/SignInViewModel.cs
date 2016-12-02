@@ -22,6 +22,8 @@ namespace DirtySkunk.Core.ViewModels
         {
             _logger = logger;
             _userService = userService;
+            Username = "toto";
+            Password = "tata";
         }
 
         public string Password
@@ -53,6 +55,8 @@ namespace DirtySkunk.Core.ViewModels
 
                 //we should show view next model
                 _logger.WriteLine(user.ToString());
+
+                ShowViewModel<BooksViewModel>();
             }catch(Exception e)
             {
                 _logger.WriteLine(e.Message);

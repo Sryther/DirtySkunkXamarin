@@ -14,7 +14,6 @@ namespace DirtySkunk.Core
                 .RegisterAsLazySingleton();
 
             RegisterAppStart<ViewModels.SignInViewModel>();
-
         }
     }
 }

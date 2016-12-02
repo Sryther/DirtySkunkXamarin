@@ -22,8 +22,9 @@ namespace DirtySkunk.Droid.Services
 
         public UserService()
         {
-            _Users = new List<User>();
-            //_Users.Add(new User("toto", "tata"));
+            _Users = new List<User>() {
+                new User("toto", "tata")
+            };
         }
 
         public static UserService Get()
