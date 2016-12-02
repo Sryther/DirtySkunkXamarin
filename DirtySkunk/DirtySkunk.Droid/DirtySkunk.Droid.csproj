@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>758a87e3-5fa0-4673-9277-c0efe8670f65</ProjectGuid>
+    <ProjectGuid>{758A87E3-5FA0-4673-9277-C0EFE8670F65}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>DirtySkunk.Droid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
