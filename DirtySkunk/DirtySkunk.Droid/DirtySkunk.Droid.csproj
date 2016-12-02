@@ -93,6 +93,7 @@
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Utils\AndroidLogger.cs" />
+    <Compile Include="Views\HomeView.cs" />
     <Compile Include="Views\SignInView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +112,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\SignInView.axml" />
+    <AndroidResource Include="Resources\layout\HomeView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />

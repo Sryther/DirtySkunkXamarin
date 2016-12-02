@@ -10,5 +10,6 @@ namespace DirtySkunk.Core.Services
     public interface IUserService
     {
         User signIn(string username, string password);
+        User CurrentUser();
     }
 }

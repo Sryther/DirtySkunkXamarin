@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="View my library"
+        android:padding="10dp"
+        local:MvxBind="Click ViewBooksButtonCommand" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Add a book"
+        android:padding="10dp"
+        local:MvxBind="Click ViewBooksButtonCommand" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:text="Bonjour USER"
+      android:gravity="center_horizontal"
+      local:MvxBind="Text Welcome" />
+</LinearLayout>

@@ -56,7 +56,7 @@ namespace DirtySkunk.Core.ViewModels
                 //we should show view next model
                 _logger.WriteLine(user.ToString());
 
-                ShowViewModel<BooksViewModel>();
+                ShowViewModel<HomeViewModel>();
             }catch(Exception e)
             {
                 _logger.WriteLine(e.Message);

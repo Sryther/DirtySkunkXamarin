@@ -51,13 +51,13 @@ namespace DirtySkunk.Droid.Services
             throw new SignInException();
         }
 
-        public User CurrentUser
+        public User CurrentUser()
         {
-            get
+            if (_currentUser == null)
             {
-                if (_currentUser == null) throw new NoCurrentUserException();
-                return _currentUser;
+                throw new NoCurrentUserException();
             }
+            return _currentUser;
         }
     }
 }
