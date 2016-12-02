@@ -58,5 +58,16 @@ namespace DirtySkunk.Core.Services
 
             throw new BookNotFoundException(id);
         }
+
+        public void Remove(string id)
+        {
+            foreach (Book book in _books)
+            {
+                if (book.Id == id)
+                {
+                    _books.Remove(book);
+                }
+            }
+        }
     }
 }

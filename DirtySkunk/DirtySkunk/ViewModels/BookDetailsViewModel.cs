@@ -1,8 +1,8 @@
-﻿using DirtySkunk.Core.Exceptions;
+﻿using System;
+using DirtySkunk.Core.Exceptions;
 using DirtySkunk.Core.Models;
 using DirtySkunk.Core.Services;
 using MvvmCross.Core.ViewModels;
-using System;
 
 namespace DirtySkunk.Core.ViewModels
 {
@@ -14,18 +14,46 @@ namespace DirtySkunk.Core.ViewModels
         private string _synopsis;
         private string _parutionDate;
         private string _rating;
+        private string _action;
+        private string _removeVisibility;
+        private string _confirmVisibility;
+        public MvxCommand<Book> ConfirmButtonCommand
+        {
+            get { return new MvxCommand<Book>(ConfirmBook);  }
+        }
+
+        public  MvxCommand<Book> RemoveButtonCommand
+        {
+            get { return new MvxCommand<Book>(RemoveBook);  }
+        }
 
         protected override void InitFromBundle(IMvxBundle parameters)
         {
             base.InitFromBundle(parameters);
             try
             {
+                // Retrieve the book using its Id.
                 _book = BookService.GetInstance().GetBookByGuid(parameters.Data["Id"]);
+
+                // Choose the action to do on button click.
+                Action = parameters.Data["Action"];
+
+                if (Action == "Delete")
+                {
+                    ConfirmVisibility = "invisible";
+                    RemoveVisibility = "visible";
+                } else
+                {
+                    ConfirmVisibility = "visible";
+                    RemoveVisibility = "invisible";
+                }
+
+                // Define the book details
                 Title = _book.Title;
                 Author = _book.Author;
                 ParutionDate = _book.ParutionDate.ToString();
                 Synopsis = _book.Synopsis;
-                Rating = _book.Rating.ToString() + "/5";
+                Rating = _book.Rating.ToString();
 
             }
             catch (BookNotFoundException e)
@@ -37,6 +65,18 @@ namespace DirtySkunk.Core.ViewModels
         public BookDetailsViewModel()
         {
 
+        }
+
+        public void RemoveBook(Book book)
+        {
+            BookService.GetInstance().Remove(book.Id);
+            ShowViewModel<BooksViewModel>();
+        }
+
+        public void ConfirmBook(Book book)
+        {
+            BookService.GetInstance().Add(book);
+            ShowViewModel<BooksViewModel>();
         }
 
         public string ParutionDate
@@ -80,9 +120,39 @@ namespace DirtySkunk.Core.ViewModels
             get { return _rating; }
             set
             {
-                _rating = value;
+                _rating = value + "/5";
                 RaisePropertyChanged();
             }
         }
+
+        public string Action
+        {
+            get { return _action; }
+            set
+            {
+                _action = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public string ConfirmVisibility
+        {
+            get { return _confirmVisibility; }
+            set {
+                _confirmVisibility = value;
+                RaisePropertyChanged();
+            }
+        }
+
+
+        public string RemoveVisibility
+        {
+            get { return _removeVisibility; }
+            set {
+                _removeVisibility = value;
+                RaisePropertyChanged();
+            }
+        }
+
     }
 }

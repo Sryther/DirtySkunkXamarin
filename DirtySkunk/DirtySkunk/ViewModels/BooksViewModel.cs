@@ -24,7 +24,8 @@ namespace DirtySkunk.Core.ViewModels
         {
             Dictionary<string, string> data = new Dictionary<string, string>
             {
-                { "Id", book.Id }
+                { "Id", book.Id },
+                { "Action", "Delete" }
             };
 
             MvxBundle bundle = new MvxBundle(data);
